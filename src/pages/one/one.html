@@ -38,22 +38,35 @@
         <div class="game-results">
           <p>
             <span class="underline">Computer score</span>:
-            <span id="computer-score">0</span>
+            <span id="computer-score" class="score">0</span>
           </p>
           <p>
             <span class="underline">Your score</span>:
-            <span id="user-score">0</span>
+            <span id="user-score" class="score">0</span>
           </p>
         </div>
         <div class="reset-btn">
-          <button class="handleReset" id="reset-btn" onclick="handleReset()">
+          <button
+            class="btn"
+            class="handleReset"
+            id="reset-btn"
+            onclick="handleReset()"
+          >
             Reset
           </button>
         </div>
         <div class="game-btn-container">
-          <button onclick="handleGame('Rock')" id="rock-btn">Rock</button>
-          <button onclick="handleGame('Paper')" id="paper-btn">Paper</button>
-          <button onclick="handleGame('Scissors')" id="scissors-btn">
+          <button class="btn" onclick="handleGame('Rock')" id="rock-btn">
+            Rock
+          </button>
+          <button class="btn" onclick="handleGame('Paper')" id="paper-btn">
+            Paper
+          </button>
+          <button
+            class="btn"
+            onclick="handleGame('Scissors')"
+            id="scissors-btn"
+          >
             Scissors
           </button>
         </div>

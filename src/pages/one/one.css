@@ -65,18 +65,27 @@ h1 {
   padding-bottom: 1em;
   color: #fff;
   text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 .game-results {
   display: flex;
   gap: 3em;
   justify-content: center;
-  padding: 2em;
+  padding: 1em;
   color: #fff;
+  font-size: 1.5em;
 }
 
 .game-results span.underline {
   text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.game-results span.score {
+  font-size: 1.125em;
+  font-weight: bold;
 }
 
 .reset-btn {
@@ -87,26 +96,21 @@ h1 {
 }
 
 .reset-btn > button {
-  cursor: pointer;
   text-align: center;
-  padding: 1em 2em;
-  background-color: transparent;
-  color: #fff;
-  border-radius: 0.5em;
-  border: 1px solid #fff;
-  font-weight: bold;
   display: none;
 }
 
-.game-btn-container > button {
-  padding: 1.5em 3em;
+.btn {
+  height: 3.56rem;
+  width: 9.375rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
   border-radius: 0.5em;
   border: 1px solid white;
   color: #fff;
   font-weight: bold;
-  text-transform: uppercase;
-  background-color: transparent;
-  cursor: pointer;
+  letter-spacing: 1.2px;
 }
 
 .game-btn-container > button:hover {

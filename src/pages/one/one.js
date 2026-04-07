@@ -1,11 +1,16 @@
 const resultInput = document.getElementById("result");
-const rockBtn = document.getElementById("rock-btn");
-const paperBtn = document.getElementById("paper-btn");
-const scissorsBtn = document.getElementById("scissors-btn");
 const userScore = document.getElementById("user-score");
 const computerScore = document.getElementById("computer-score");
+// const rockBtn = document.getElementById("rock-btn");
+// const paperBtn = document.getElementById("paper-btn");
+// const scissorsBtn = document.getElementById("scissors-btn");
 const resetBtn = document.getElementById("reset-btn");
 const winInput = document.getElementById("win");
+const gameBtns = [
+  document.getElementById("rock-btn"),
+  document.getElementById("paper-btn"),
+  document.getElementById("scissors-btn"),
+];
 
 let choices = ["Rock", "Paper", "Scissors"];
 
@@ -25,6 +30,10 @@ function computerMove() {
 
 let computerPoints = 0;
 let userPoints = 0;
+
+function setGameButtons(disabled) {
+  gameBtns.forEach((btn) => (btn.disabled = disabled));
+}
 
 function handleGame(userChoice) {
   let computerChoice = computerMove();
@@ -49,9 +58,10 @@ function handleGame(userChoice) {
     let win = computerPoints === 3 ? "Computer wins!!" : "You win!!";
     winInput.textContent = win;
     resetBtn.style.display = "block";
-    rockBtn.disabled = true;
-    paperBtn.disabled = true;
-    scissorsBtn.disabled = true;
+    setGameButtons(true);
+    // rockBtn.disabled = true;
+    // paperBtn.disabled = true;
+    // scissorsBtn.disabled = true;
   }
 }
 
@@ -63,7 +73,8 @@ function handleReset() {
   computerPoints = 0;
   userPoints = 0;
   resetBtn.style.display = "none";
-  rockBtn.disabled = false;
-  paperBtn.disabled = false;
-  scissorsBtn.disabled = false;
+  setGameButtons(false);
+  // rockBtn.disabled = false;
+  // paperBtn.disabled = false;
+  // scissorsBtn.disabled = false;
 }
