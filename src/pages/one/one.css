@@ -174,5 +174,51 @@ h1 {
     color: #fff;
     background-color: transparent;
     border: none;
+    font-size: 1.5em;
+  }
+
+  main {
+    padding: 3em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .result {
+    height: 20vh;
+  }
+
+  .result .win {
+    padding: 2em 0 4em 0;
+  }
+
+  .game-results {
+    padding-bottom: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .game-results,
+  .game-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-results {
+    gap: 1em;
+  }
+
+  .game-results span.underline {
+    font-size: 0.75em;
+  }
+
+  .game-results span.score {
+    font-size: 0.9em;
   }
 }
