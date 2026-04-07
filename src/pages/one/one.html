@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a8156b8a54.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="one.css" />
     <title>Project One</title>
   </head>
@@ -12,8 +22,13 @@
         <div>
           <p class="home-page"><a href="/index.html">Mini JS Projects</a></p>
         </div>
-        <div>
-          <ul class="page-links">
+        <div class="hamburger-icon-container">
+          <button class="hamburger-btn" onclick="handleMenuToggle()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="nav-pages">
+          <ul class="page-links" id="page-links">
             <li class="nav-link"><a href="one.html">One</a></li>
             <li class="nav-link"><a href="/src/pages/two/two.html">Two</a></li>
             <li class="nav-link">
@@ -26,9 +41,6 @@
               <a href="/src/pages/five/five.html">Five</a>
             </li>
           </ul>
-        </div>
-        <div class="hamburger-icon">
-          <i class="fa-solid fa-bars"></i>
         </div>
       </nav>
     </header>

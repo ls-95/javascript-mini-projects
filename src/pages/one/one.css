@@ -6,6 +6,10 @@
 
 body {
   background: linear-gradient(to right, #d4623a, #f0956a);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  max-width: 100vw;
+  width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -44,7 +48,7 @@ nav {
   background-color: #d65a2d;
 }
 
-.hamburger-icon {
+.hamburger-icon-container {
   display: none;
 }
 
@@ -133,4 +137,42 @@ h1 {
 
 .result p {
   padding: 0.5em;
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-pages {
+    width: 100%;
+  }
+
+  nav .page-links {
+    display: none;
+  }
+
+  nav .page-links.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav .hamburger-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1em 2em;
+    margin-left: auto;
+  }
+
+  nav .hamburger-btn {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
 }

@@ -6,6 +6,7 @@ const computerScore = document.getElementById("computer-score");
 // const scissorsBtn = document.getElementById("scissors-btn");
 const resetBtn = document.getElementById("reset-btn");
 const winInput = document.getElementById("win");
+const menu = document.getElementById("page-links");
 const gameBtns = [
   document.getElementById("rock-btn"),
   document.getElementById("paper-btn"),
@@ -77,4 +78,8 @@ function handleReset() {
   // rockBtn.disabled = false;
   // paperBtn.disabled = false;
   // scissorsBtn.disabled = false;
+}
+
+function handleMenuToggle() {
+  menu.classList.toggle("is-open");
 }
