@@ -47,3 +47,52 @@ nav {
 .hamburger-icon {
   display: none;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.game-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75em;
+}
+
+h1 {
+  padding-bottom: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.game-btn-container > button {
+  padding: 1.5em 3em;
+  border-radius: 0.5em;
+  border: 1px solid white;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.game-btn-container > button:hover {
+  background-color: #ed9369;
+}
+
+.game-btn-container > button:active {
+  background-color: #d65a2d;
+  position: relative;
+  top: 2px;
+}
+
+.result {
+  height: 10vh;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+  padding: 2em;
+}
