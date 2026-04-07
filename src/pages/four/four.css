@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #d4623a, #f0956a);
+  font-family: "IBM Plex Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid aliceblue;
+}
+
+.page-links {
+  display: flex;
+  list-style: none;
+}
+
+.home-page > a,
+.nav-link > a {
+  text-decoration: none;
+  display: block;
+  padding: 1.8em 2.5em;
+  color: aliceblue;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+}
+
+.home-page > a:hover,
+.nav-link > a:hover {
+  background-color: #ed9369;
+}
+
+.home-page > a:active,
+.nav-link > a:active {
+  background-color: #d65a2d;
+}
+
+.hamburger-icon {
+  display: none;
+}
