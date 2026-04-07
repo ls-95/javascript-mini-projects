@@ -7,19 +7,21 @@ const computerScore = document.getElementById("computer-score");
 const resetBtn = document.getElementById("reset-btn");
 const winInput = document.getElementById("win");
 
+let choices = ["Rock", "Paper", "Scissors"];
+
 function computerMove() {
-  let randomNumber = Math.floor(Math.random() * 3);
-  let computerChoice = "";
-  if (randomNumber === 0) {
-    computerChoice = "Rock";
-  } else if (randomNumber === 1) {
-    computerChoice = "Paper";
-  } else {
-    computerChoice = "Scissors";
-  }
-  return computerChoice;
+  return choices[Math.floor(Math.random() * 3)];
+  // let randomNumber = Math.floor(Math.random() * 3);
+  // let computerChoice = "";
+  // if (randomNumber === 0) {
+  //   computerChoice = "Rock";
+  // } else if (randomNumber === 1) {
+  //   computerChoice = "Paper";
+  // } else {
+  //   computerChoice = "Scissors";
+  // }
+  // return computerChoice;
 }
-computerMove();
 
 let computerPoints = 0;
 let userPoints = 0;
