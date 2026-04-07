@@ -6,6 +6,8 @@
 
 body {
   background: linear-gradient(to right, #d4623a, #f0956a);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "IBM Plex Sans", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -44,7 +46,7 @@ nav {
   background-color: #d65a2d;
 }
 
-.hamburger-icon {
+.hamburger-icon-container {
   display: none;
 }
 
@@ -85,4 +87,43 @@ main {
   color: aliceblue;
   text-align: center;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  .nav-pages {
+    width: 100%;
+  }
+
+  nav .page-links {
+    display: none;
+  }
+
+  nav .page-links.is-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav .hamburger-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1em 2em;
+    margin-left: auto;
+  }
+
+  nav .hamburger-btn {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+  }
 }
